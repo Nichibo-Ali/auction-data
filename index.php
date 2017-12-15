@@ -15,8 +15,6 @@ ini_set('max_execution_time', 1620); //27 minutes
 
 
 
-
-
 /*=================================================================*/
 #-------------------------------------------------------------------
 #         START of the Script.
@@ -28,12 +26,32 @@ ini_set('max_execution_time', 1620); //27 minutes
 
 /*must call this method  first */
 $global_Auction_Filter_Array = loadAuctionFiltersFile();
-main_process();
+// main_process();
+
+run_test();
+
+
 echo "done";
 
 
+function run_test()
+{
+
+	echo "===========Running Tests=============<br>";
+
+	echo " =====Get S3 Client<br>";
+
+	var_dump(getS3Client());
+
+	echo "<br><hr><br>";
+
+	echo " =====Get DB Connnection <br>";
 
 
+	var_dump(getRDSConnection());
+
+	echo "<br><hr><br>";
+}
 // delete all the files in bucket
 function deleteAllFilesInBucket()
 {
@@ -165,8 +183,7 @@ function getRDSConnection()
 
 function getS3Client()
 {
-	/*Todo: move the credentials to external config file or another method all together*/
-	$provider = CredentialProvider::ini('project2','C:\Users\Ali\Desktop\credentials.ini');
+	$provider = CredentialProvider::ini('default','credentials.ini');
 	$provider = CredentialProvider::memoize($provider);
 
 	return	$s3 = S3Client::factory(array(
