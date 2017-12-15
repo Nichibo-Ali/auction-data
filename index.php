@@ -146,18 +146,22 @@ function getRDSTable()
 /*connect to amazon Database TODO: move the credentials to external Config file or other method*/
 function getRDSConnection()
 {
+
+	$config = require_once('dbconf.php');
+
+	$host     =	$config['host'];
+	$username = $config['username'];
+	$password = $config['password'];
+	$DBName   = $config['dbname'];
+
 	//======================Connect to db========================
-	$servername = "auctiondata.cbwhuremoai5.us-east-2.rds.amazonaws.com:3306";
-	$username = "nichibo";
-	$password = "nichibo01";
-	$DBName = "auction_data_db_test";
 	// Create connection
-	$conn = new mysqli($servername, $username, $password,$DBName);
+	$conn = new mysqli($host, $username, $password,$DBName);
 	// Check connection
 	if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
+		// echo "Connected successfully<br>";
 	return $conn;
 }
-
 
 function getS3Client()
 {
