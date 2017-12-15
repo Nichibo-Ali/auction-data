@@ -1,0 +1,45 @@
+
+
+===========Error Occured===========
+
+Date: 13/12/2017
+
+ Some or all data could not be inserted into auction_data_test_1 for this this file auctionFiles/last_update.txt.
+
+
+
+
+===========Error Occured===========
+
+Date: 13/12/2017
+
+Some or all data could not be inserted into auction_data_test_1 for this this file: auctionFiles/last_update.txt.
+
+
+
+
+===========Error Occured===========
+
+Date: 13/12/2017
+
+Some or all data could not be inserted into auction_data_test_1 for this this file: auctionFiles/last_update.txt.
+
+
+
+
+===========Error Occured===========
+
+Date: 13/12/2017
+
+Some or all data could not be inserted into auction_data_test_1 for this this file: auctionFiles/last_update.txt.
+
+
+
+
+===========Error Occured===========
+
+Date: 13/12/2017
+
+Some or all data could not be inserted into auction_data_test_1 for this this file: auctionFiles/last_update.txt.
+
+
